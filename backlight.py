@@ -15,11 +15,11 @@ MIN_CHANGE_FRAMES = 80
 '''
 The time of lerping one color to another (smaller numbers better for action films)
 '''
-DURATION = 650
+DURATION = 750
 '''
 Interval between screen captures
 '''
-UPDATEINTERVAL = 0.1
+UPDATE_INTERVAL = 0.1
 '''
 Get color of each DECIMATE pixel
 (Increasing this value allows better average color calculation at cost of increased cpu usage)
@@ -31,9 +31,10 @@ print('Starting')
 from yeelight.transitions import *
 from yeelight import Flow, Bulb
 import keyboard
-import matplotlib.pyplot as plt
 
+#Connect to lamp
 bulb = Bulb(LAMP_IP, effect='smooth', duration=DURATION)
+#Start music to remove number of changes limit
 bulb.start_music()
 
 from PIL import ImageGrab
@@ -41,6 +42,7 @@ import time
 import os
 import colorsys
 
+#Setup
 image = ImageGrab.grab()
 width = image.size[0]
 height = image.size[1]
@@ -90,6 +92,6 @@ while True:
                 change_frames = 0
         change_frames += count
         count+=1
-        time.sleep(UPDATEINTERVAL)
+        time.sleep(UPDATE_INTERVAL)
 #bulb.stop_music() Gives error
 print('Stopped')
