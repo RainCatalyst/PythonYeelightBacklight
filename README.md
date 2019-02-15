@@ -91,3 +91,7 @@ Get color of each DECIMATE pixel
 '''
 DECIMATE = 8
 ```
+# TODO
+- Change lamp brightness for more contrast
+- Do more research with different films to find the best parameters
+- Deal with lamp socket errors (*if possible*)
