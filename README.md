@@ -1,6 +1,9 @@
 # PythonYeelightBacklight
 Backlight python script for Xiaomi Yeelight
 
+# Demonstration
+[Youtube link](https://youtu.be/4yW8qdjaXVA)
+
 # How to setup
 1. Install python
 2. Install dependencies (pip install yeelight, keyboard, Pillow)
